@@ -139,7 +139,7 @@ app.get("/", (req, res) => {
 
 // GET /echo route
 app.get("/echo", (req, res) => {
-  const { name, age } = req.query;
+  const { name, age = 0 } = req.query;
   if (!name || !age) {
     return res.status(400).json({ ok: false, error: "name & age required" });
   }
