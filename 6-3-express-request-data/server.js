@@ -149,7 +149,7 @@ app.get("/echo", (req, res) => {
 // GET /profile/:first/:last route
 app.get("/profile/:first/:last", (req, res) => {
   const { first, last } = req.params;
-  res.json({ ok: true, fullName: `${first} ${last}` });
+  res.json({ ok: true, fullName: `${first} ${last}` })
 });
 
 // app.param middleware for userId
